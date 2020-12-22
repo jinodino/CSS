@@ -178,13 +178,59 @@ header .navigation li a{
         padding: 40px;
     }
     section {
-        position: relative;
-        width: 100%;
-        min-height: 100vh;
         padding: 150px 40px;
+    }
+    .sci {
+        left: 40px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .content .textBox,
+    .content .imgBox {
+        max-width: 100%;
+    }
+    .swiper-slide {
+        height: 300px;
+    }
+    header .navigation {
+         display: none;
+    }
+    header .navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #e51e2a;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        background: #161616;
+        z-index: 10;
+     }
+     header .navigation li a {
+        margin: 10px 0;
+        font-size: 1.5em;
+        font-weight: 300;
+     }
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(./img/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .toggle.active {
+        position: fixed;
+        right: 40px;
+        background: url(./img/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
